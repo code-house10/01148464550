@@ -6,7 +6,7 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PK5Z7MZT');</script>
+    })(window,document,'script','dataLayer','GTM-MJSCTHKH');</script>
     <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
@@ -114,26 +114,100 @@
             transform: translateX(-50%);
             border-radius: 2px;
         }
+        
+        /* --- Offer Banner Styles --- */
+        .offer-banner {
+            background: linear-gradient(90deg, #14B8A6, #082F49); /* Catchy Gradient: Teal to Midnight Blue */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: all 0.4s ease-in-out;
+            position: relative; /* Stays in flow initially */
+            z-index: 100;
+            min-height: 55px;
+            overflow: hidden;
+        }
+        .offer-banner.scrolled {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            height: auto;
+            width: 280px; /* Made smaller */
+            border-radius: 12px;
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, #14B8A6, #0D9488); /* Subtle Teal Gradient */
+            gap: 10px;
+        }
+        .offer-text {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .offer-banner.scrolled .offer-text {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        .offer-cta {
+            background-color: #F59E0B; /* Amber - for high contrast */
+            color: #1F2937; /* Dark gray text for readability */
+            border: none;
+            padding: 8px 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            white-space: nowrap;
+            transition: background-color 0.3s;
+        }
+        .offer-cta:hover {
+            background-color: #D97706; /* Darker Amber */
+        }
+        .countdown-timer {
+            font-weight: 700;
+            font-size: 1.1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+        .offer-banner.scrolled .countdown-timer {
+            font-size: 1rem;
+        }
+        .fa-phone-alt {
+            transform: scaleX(-1);
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PK5Z7MZT"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJSCTHKH"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Offer Banner -->
+    <div id="offerBanner" class="offer-banner">
+        <p class="offer-text">خصم 30% لفترة محدودة! ينتهي العرض خلال:</p>
+        <div id="countdown" class="countdown-timer"></div>
+        <button class="offer-cta" onclick="showConfirmationLayer()">اطلب عرض سعر</button>
+    </div>
 
     <!-- 1. Header Section -->
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="bg-dark text-white text-sm py-2">
             <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
-                <span class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> لطلب الخدمة: 01024888950</span>
+                <span class="flex items-center"><i class="fas fa-phone-alt mr-2"></i> لطلب الخدمة: 01148464550</span>
                 <span class="hidden md:block">خصم 25% لعملاء التجمع الخامس</span>
             </div>
         </div>
         <nav class="container mx-auto py-4 px-4 md:px-8 flex justify-between items-center">
             <div class="flex items-center">
-                <h2 class="font-bold text-2xl text-dark">نقل عفش<span class="text-primary"> التجمع الخامس</span></h2>
+                <h2 class="font-bold text-2xl text-dark">شركة الصفوة<span class="text-primary"> لنقل العفش</span></h2>
             </div>
             <div class="flex items-center">
                 <button class="btn-primary px-6 py-2 rounded-full font-semibold hover:shadow-lg transition duration-300" onclick="showConfirmationLayer()">اطلب عرض سعر</button>
@@ -144,10 +218,10 @@
     <!-- 2. Hero Banner -->
     <section class="hero-bg text-white py-24 md:py-40 relative">
         <div class="container mx-auto px-4 md:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">أفضل شركة نقل عفش بالتجمع الخامس | خصم 25%</h1>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"></h1>
             <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-200">
-                نحن نقدم لك خدمة نقل عفش آمنة، سريعة، وموثوقة. فريقنا المحترف يضمن لك نقل أثاثك بدون أي خدوش أو تلفيات.
-            </p>
+                
+            </p><br><br><br><br><br><br><br><br>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button onclick="showConfirmationLayer()" class="btn-primary text-lg px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 inline-flex items-center justify-center">
                     <i class="fas fa-phone-alt mr-2"></i> اتصل الآن لنقل عفشك
@@ -159,7 +233,7 @@
     <!-- New Content Section -->
     <section class="py-8 bg-white">
         <div class="container mx-auto px-4 md:px-8 text-center">
-            <p class="text-xl text-gray-700 font-semibold">هل تبحث عن شركة لنقل العفش بالتجمع الخامس؟ نحن نقدم لك خدمة نقل عفش آمنة، سريعة، وموثوقة. فريقنا المحترف يضمن لك نقل أثاثك بدون أي خدوش أو تلفيات.</p>
+            <p class="text-xl text-gray-700 font-semibold">هل تبحث عن شركة لنقل العفش بالتجمع الخامس؟ </p>
         </div>
     </section>
 
@@ -189,8 +263,8 @@
             <div id="confirmationStep3" class="hidden">
                 <h3 class="text-2xl font-bold mb-4 text-gray-900">اتصل بنا الآن!</h3>
                 <p class="text-gray-600 mb-8">اضغط على الرقم للتواصل الفوري مع أفضل شركة نقل عفش بالتجمع الخامس.</p>
-                <a href="tel:01024888950" class="bg-teal-500 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-teal-600 transition duration-300 inline-flex items-center justify-center text-2xl">
-                    <i class="fas fa-phone-alt mr-3"></i> 01024888950
+                <a href="tel:01148464550" class="bg-teal-500 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-teal-600 transition duration-300 inline-flex items-center justify-center text-2xl">
+                    <i class="fas fa-phone-alt mr-3"></i> 01148464550
                 </a>
             </div>
         </div>
@@ -333,7 +407,7 @@
                     لا تتردد! اتصل بنا الآن للحصول على عرض سعر مجاني وفوري. فريقنا جاهز للرد على جميع استفساراتك وتقديم أفضل خدمة نقل عفش بالتجمع الخامس.
                 </p>
                 <button onclick="showConfirmationLayer()" class="btn-primary text-xl px-10 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition duration-300 inline-flex items-center justify-center transform hover:scale-105">
-                    <i class="fas fa-phone-alt mr-3"></i> اتصل الآن: 01024888950
+                    <i class="fas fa-phone-alt mr-3"></i> اتصل الآن: 01148464550
                 </button>
             </div>
         </div>
@@ -368,7 +442,7 @@
                     <h3 class="text-xl font-bold mb-4">معلومات الاتصال</h3>
                     <address class="space-y-2 text-gray-400 not-italic">
                         <p class="flex items-center"><i class="fas fa-map-marker-alt mr-3"></i> نخدم جميع مناطق التجمع الخامس</p>
-                        <p class="flex items-center"><i class="fas fa-phone-alt mr-3"></i> 01024888950</p>
+                        <p class="flex items-center"><i class="fas fa-phone-alt mr-3"></i> 01148464550</p>
                         <p class="flex items-center"><i class="fas fa-clock mr-3"></i> نعمل على مدار 24 ساعة</p>
                     </address>
                 </div>
@@ -418,6 +492,48 @@
                 confirmationStep2.classList.add('hidden');
                 confirmationStep3.classList.remove('hidden');
             }
+        }
+
+        // --- Offer Banner Scroll Logic ---
+        const offerBanner = document.getElementById('offerBanner');
+        if (offerBanner) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) { // Activates after scrolling 100px
+                    offerBanner.classList.add('scrolled');
+                } else {
+                    offerBanner.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // --- Countdown Timer Logic ---
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) {
+            // Set the date we're counting down to (24 hours from now)
+            let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+            // Update the count down every 1 second
+            let x = setInterval(function() {
+                // Get today's date and time
+                let now = new Date().getTime();
+                
+                // Find the distance between now and the count down date
+                let distance = countDownDate - now;
+                
+                // Time calculations for hours, minutes and seconds
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Display the result in the element with id="countdown"
+                countdownElement.innerHTML = `${hours.toString().padStart(2, '0')} ساعة : ${minutes.toString().padStart(2, '0')} دقيقة : ${seconds.toString().padStart(2, '0')} ثانية`;
+                
+                // If the count down is finished, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    countdownElement.innerHTML = "انتهى العرض";
+                }
+            }, 1000);
         }
     </script>
 </body>
